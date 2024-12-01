@@ -15,6 +15,7 @@
       margin: 0;
       flex-direction: column;
       text-align: center;
+      padding: 20px;
     }
     .chat-container {
       background: #fff;
@@ -106,29 +107,4 @@
         const data = await response.json();
 
         if (data.reply) {
-          // Display chatbot response
-          displayMessage(data.reply, 'bot');
-        } else {
-          displayMessage("Sorry, I couldn't understand that.", 'bot');
-        }
-      } catch (error) {
-        console.error("Error:", error);
-        displayMessage("Sorry, something went wrong. Please try again later.", 'bot');
-      }
-    }
-
-    // Function to display messages in the chat window
-    function displayMessage(message, sender) {
-      const messagesContainer = document.getElementById("messages");
-      const messageElement = document.createElement("div");
-      messageElement.classList.add("message");
-      messageElement.classList.add(sender === 'user' ? "user-message" : "bot-message");
-      messageElement.innerText = message;
-      messagesContainer.appendChild(messageElement);
-
-      // Scroll to the bottom of the chat
-      messagesContainer.scrollTop = messagesContainer.scrollHeight;
-    }
-  </script>
-</body>
-</html>
+          
