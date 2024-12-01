@@ -13,6 +13,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
+      flex-direction: column;
     }
     .chat-container {
       background: #fff;
@@ -62,9 +63,17 @@
     button:hover {
       background-color: #3f4a9f;
     }
+    img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
+  <!-- Add Image Above Chat Box -->
+  <img src="askfreddie.jpg" alt="Ask Freddie" />
+
   <div class="chat-container">
     <div class="messages" id="messages"></div>
     <input type="text" id="userInput" placeholder="Ask me something..." />
